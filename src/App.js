@@ -48,6 +48,18 @@ class App extends Component {
 		this.setState({ result: [] });
 	};
 
+	sortByLast = () => {
+		let sorted = this.state.employees;
+		sorted.sort((a,b) => (a.name.last > b.name.last ) ? 1 : -1)
+		this.setState({ result: sorted });
+	};
+
+	sortByFirst = () => {
+		let sorted = this.state.employees;
+		sorted.sort((a,b) => (a.name.first > b.name.first ) ? 1 : -1)
+		this.setState({ result: sorted });
+	};
+
 	render() {
 		return (
 			<div className="container">
@@ -58,6 +70,12 @@ class App extends Component {
 					</button>
 					<button className="btn btn-danger m-2" onClick={this.clearAll}>
 						Clear all
+					</button>
+					<button className="btn btn-warning m-2" onClick={this.sortByLast}>
+						Sort by Last Name
+					</button>
+					<button className="btn btn-warning m-2" onClick={this.sortByFirst}>
+						Sort by First Name
 					</button>
 				</div>
 				<div className="row d-flex justify-content-center">
