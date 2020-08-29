@@ -1,3 +1,5 @@
+# [Link to deployed application](https://jiberjiber.github.io/employee-directory/)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
